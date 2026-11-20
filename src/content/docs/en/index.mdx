@@ -1,0 +1,47 @@
+---
+title: VideoTurbo
+description: A self-hosted tool that adds translated subtitles to your video library.
+template: splash
+hero:
+  tagline: A self-hosted tool that adds translated subtitles to your video library. It transcribes the dialogue, translates it into the language you choose and saves an .srt next to each video, ready for Emby / Jellyfin after a refresh.
+  image:
+    file: ../../../assets/logo.svg
+  actions:
+    - text: Get started
+      link: guide/introduction/
+      icon: right-arrow
+    - text: Download
+      link: https://github.com/VideoTurbo/VideoTurbo/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Subtitles](../../../assets/en/subtitles.png)
+
+## Features
+
+<CardGrid>
+	<Card title="Automatic subtitles" icon="translate">
+		Japanese, English or Korean → Simplified Chinese, Traditional Chinese, English and more, with a language pair per library.
+	</Card>
+	<Card title="Skips what it doesn't need" icon="approve-check">
+		Videos that already have a target-language subtitle are marked completed; videos with source-language text subtitles are translated without speech recognition.
+	</Card>
+	<Card title="Web dashboard" icon="laptop">
+		Scan, submit, pause and retry from the browser, in English or Simplified Chinese.
+	</Card>
+	<Card title="Several machines at once" icon="rocket">
+		Home PCs and on-demand cloud GPUs can all join; jobs are shared out automatically and cloud hosts shut down when they finish.
+	</Card>
+	<Card title="Optional" icon="puzzle">
+		AI video restoration, cloud storage libraries, Emby / Jellyfin refresh, webhook notifications and plugins.
+	</Card>
+</CardGrid>
+
+## Screenshots
+
+| Connected machines and cloud hosts | Translation models |
+| --- | --- |
+| ![Cloud hosts](../../../assets/en/compute.png) | ![Models](../../../assets/en/translate.png) |

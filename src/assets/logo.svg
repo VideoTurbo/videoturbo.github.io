@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>VideoTurbo</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b44b3"/>
+      <stop offset="0.55" stop-color="#5a63e0"/>
+      <stop offset="1" stop-color="#959cff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.18" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1e2470" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <!-- 斜体 VT 字标 + 左侧速度线；内容落在中心圆形安全区内 -->
+  <g transform="translate(256 256) scale(0.7) skewX(-12) translate(-170 -100)" fill="#fff">
+    <g stroke="#fff" stroke-linecap="round" stroke-width="22">
+      <line x1="-84" y1="36" x2="-26" y2="36" opacity="0.5"/>
+      <line x1="-80" y1="100" x2="2" y2="100" opacity="0.75"/>
+      <line x1="-14" y1="164" x2="30" y2="164" opacity="0.5"/>
+    </g>
+    <g filter="url(#shadow)">
+    <path d="M0 0 H64 L110 104 L156 0 H220 L131 200 H89 Z"/>
+    <path d="M238 0 H420 V58 H358 V200 H298 V58 H238 Z"/>
+    </g>
+  </g>
+</svg>
