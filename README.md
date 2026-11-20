@@ -1,6 +1,6 @@
 # VideoTurbo 官网
 
-[VideoTurbo](https://github.com/VideoTurbo/VideoTurbo) 的文档站，用 [Astro Starlight](https://starlight.astro.build/) 搭建，推送到 `main` 后由 GitHub Actions 部署到 GitHub Pages。
+[VideoTurbo](https://github.com/VideoTurbo/VideoTurbo) 的文档站 <https://videoturbo.github.io/>，用 [Astro Starlight](https://starlight.astro.build/) 搭建，推送到 `main` 后由 GitHub Actions 部署到 GitHub Pages。
 
 ## 本地预览
 
@@ -18,6 +18,6 @@ npm run dev
 
 ## 换成自有域名
 
-1. 在 `astro.config.mjs` 里把 `SITE` 改成 `https://你的域名`，`BASE` 改成 `'/'`。
+1. 在 `astro.config.mjs` 里把 `SITE` 改成 `https://你的域名`。
 2. 新建 `public/CNAME`，内容是域名。
 3. 在仓库 Settings → Pages 填写自定义域名，并在域名服务商处配置 DNS。

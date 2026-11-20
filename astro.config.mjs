@@ -2,9 +2,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// 站点地址。定好自有域名后：SITE 改成 https://你的域名，BASE 改成 '/'，并在 public/ 下新建 CNAME 文件写入域名。
+// 站点地址。换成自有域名时：SITE 改成 https://你的域名，并在 public/ 下新建 CNAME 文件写入域名。
 const SITE = 'https://videoturbo.github.io';
-const BASE = '/website';
+const BASE = '/';
 
 export default defineConfig({
 	site: SITE,
@@ -16,7 +16,7 @@ export default defineConfig({
 			logo: { src: './src/assets/logo.svg' },
 			favicon: '/favicon.svg',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/VideoTurbo/VideoTurbo' }],
-			editLink: { baseUrl: 'https://github.com/VideoTurbo/website/edit/main/' },
+			editLink: { baseUrl: 'https://github.com/VideoTurbo/videoturbo.github.io/edit/main/' },
 			lastUpdated: true,
 			defaultLocale: 'root',
 			locales: {
