@@ -28,8 +28,9 @@ sqlite3 data/app.db "DELETE FROM runtime_settings WHERE key = 'admin_auth';"
 ```sh
 docker compose logs -f orchestrator                 # 主程序（也保存在 logs/server.log）
 bash deploy/worker/linux/worker.sh logs asr -f      # Linux 显卡电脑
-.\deploy\worker\windows\worker.ps1 logs -Follow     # Windows 显卡电脑
 ```
+
+桌面版主程序和 Windows 显卡电脑（VideoTurbo Worker）：托盘菜单 →“打开日志文件夹”。
 
 ## 还有问题？
 
