@@ -14,7 +14,7 @@ If the main app is the desktop app on a Windows computer with an NVIDIA GPU, you
 2. Download `VideoTurbo-Worker_<version>_x64-setup.exe` from [Releases](https://github.com/VideoTurbo/VideoTurbo/releases/latest) and install it.
 3. Open VideoTurbo Worker, paste the connection code and click **Connect**.
 
-Choose **Connect and download now**, or **Connect, download later**. It downloads the program environment and the models the current recognition mode needs (see [Program environment and models](#program-environment-and-models)), runs a self-test, then starts taking jobs.
+After pasting, the models the main app's current recognition mode needs are ticked; change the ticks if you like, then choose **Connect and download now** or **Connect, download later**. It downloads the program environment and the models the current recognition mode needs (see [Program environment and models](#program-environment-and-models)), runs a self-test, then starts taking jobs.
 It starts with Windows and only takes jobs while the GPU is idle. The tray menu can pause jobs, open the logs and turn off starting at login.
 
 Windows PCs only provide subtitle recognition; video restoration needs Linux.
