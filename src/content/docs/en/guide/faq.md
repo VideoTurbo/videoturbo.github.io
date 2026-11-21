@@ -28,8 +28,9 @@ Add `VIDEO_TURBO_SAFE_MODE: "1"` under `environment` in `docker-compose.yml`, re
 ```sh
 docker compose logs -f orchestrator                 # main app (also saved to logs/server.log)
 bash deploy/worker/linux/worker.sh logs asr -f      # Linux GPU PC
-.\deploy\worker\windows\worker.ps1 logs -Follow     # Windows GPU PC
 ```
+
+Desktop main app and Windows GPU PC (VideoTurbo Worker): tray menu → **Open logs folder**.
 
 ## Still stuck?
 
