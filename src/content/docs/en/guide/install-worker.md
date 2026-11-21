@@ -35,6 +35,9 @@ Only the models for the current mode are downloaded:
 | Qwen3-ASR (**Two passes** off) | Qwen3-ASR, about 4.4 GB |
 | Faster-Whisper | Whisper large-v3, about 2.9 GB |
 
+Qwen3-ASR and Whisper have smaller versions that download faster and take less space, with somewhat lower accuracy: Qwen3-ASR 0.6B (about 1.8 GB); Whisper large-v3-turbo (about 1.5 GB, close to large-v3), medium (about 1.4 GB) and small (about 0.45 GB, noticeably worse for Japanese).
+Pick the version in each computer's model list; it only affects that computer.
+
 The model list in the window shows each model's purpose, size and whether it's downloaded. The models the current mode needs are ticked; change the ticks and click **Download selected**, or delete models you don't use.
 If you later switch the recognition mode in the dashboard and a model is missing, nothing downloads automatically: the window and the **Cloud hosts** tab show what's missing, and it downloads when you click **Download**. Until then the computer takes no jobs in that mode.
 
