@@ -14,7 +14,7 @@ If the main app is the desktop app on a Windows computer with an NVIDIA GPU, you
 2. Download `VideoTurbo-Worker_<version>_x64-setup.exe` from [Releases](https://github.com/VideoTurbo/VideoTurbo/releases/latest) and install it.
 3. Open VideoTurbo Worker, paste the connection code and click **Connect**.
 
-It downloads the program environment (about 2 GB) and models (about 4 GB), runs a self-test, then starts taking jobs.
+Choose **Connect and download now**, or **Connect, download later**. It downloads the program environment and the models the current recognition mode needs (see [Program environment and models](#program-environment-and-models)), runs a self-test, then starts taking jobs.
 It starts with Windows and only takes jobs while the GPU is idle. The tray menu can pause jobs, open the logs and turn off starting at login.
 
 Windows PCs only provide subtitle recognition; video restoration needs Linux.
@@ -23,6 +23,20 @@ Windows PCs only provide subtitle recognition; video restoration needs Linux.
 `worker.ps1` is no longer provided. In the old project folder run `.\deploy\worker\windows\worker.ps1 stop`,
 delete the `VideoTurbo-Worker` task in Task Scheduler, then install VideoTurbo Worker. You can delete the old project folder.
 :::
+
+## Program environment and models
+
+The first time VideoTurbo Worker or the main app's local recognition is turned on, it downloads the program environment (about 3.6 GB on Windows) and the models the main app's current recognition mode needs.
+Only the models for the current mode are downloaded:
+
+| Recognition mode | Models downloaded |
+| --- | --- |
+| Qwen3-ASR (default, **Two passes** on) | Qwen3-ASR + anime-whisper, about 7.2 GB |
+| Qwen3-ASR (**Two passes** off) | Qwen3-ASR, about 4.4 GB |
+| Faster-Whisper | Whisper large-v3, about 2.9 GB |
+
+The model list in the window shows each model's purpose, size and whether it's downloaded. The models the current mode needs are ticked; change the ticks and click **Download selected**, or delete models you don't use.
+If you later switch the recognition mode in the dashboard and a model is missing, nothing downloads automatically: the window and the **Cloud hosts** tab show what's missing, and it downloads when you click **Download**. Until then the computer takes no jobs in that mode.
 
 ## Linux
 

@@ -17,8 +17,10 @@ There are two ways to install the main app:
 3. The dashboard window on this computer needs no password. To open the dashboard from a phone or another computer,
    set an admin password under **Settings → Account**, then tick **Allow other devices on the local network to open the console** in the tray menu's **Settings…**.
 4. Add video folders under **Settings → Libraries**: any drive on Windows; external drives and network shares are under `/Volumes` on a Mac.
-5. On a Windows computer with an NVIDIA GPU, turn on the switch in the tray menu's **Local recognition…** and you don't need a separate GPU PC.
-   The first time downloads the program environment (about 2 GB) and models (about 4 GB). On a Mac, local recognition uses the CPU and is much slower.
+5. On a Windows computer with an NVIDIA GPU, the first start asks whether to turn on local recognition; with it on, you don't need a separate GPU PC.
+   You can also turn it on later with the switch in the tray menu's **Local recognition…**. Choose to download now, or turn it on and download later.
+   What gets downloaded is listed under [Program environment and models](../install-worker/#program-environment-and-models); manage it in the model list of the **Local recognition…** window.
+   On a Mac, local recognition uses the CPU and is much slower.
 
 :::note[Blocked the first time you open it]
 The installers aren't code-signed yet. If macOS says the developer can't be verified, click **Open Anyway** under **System Settings → Privacy & Security**;

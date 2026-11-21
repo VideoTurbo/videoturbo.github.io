@@ -14,8 +14,8 @@ description: 在 Windows 或 Linux 显卡电脑上安装语音识别服务。
 2. 从 [Releases](https://github.com/VideoTurbo/VideoTurbo/releases/latest) 下载 `VideoTurbo-Worker_<版本>_x64-setup.exe` 并安装。
 3. 打开 VideoTurbo Worker，粘贴接入串，点“连接”。
 
-它会自动下载运行环境（约 2 GB）和识别模型（约 4 GB）并自检，之后开始接任务。之后开机自动启动，
-只在显卡空闲时接任务。托盘菜单里可以暂停接单、查看日志、关闭开机自启。
+可以选“连接并立即下载”，或“连接，稍后下载”。它会下载运行环境和当前识别模式需要的模型（见[运行环境和模型](#运行环境和模型)）并自检，
+之后开始接任务。之后开机自动启动，只在显卡空闲时接任务。托盘菜单里可以暂停接单、查看日志、关闭开机自启。
 
 Windows 电脑只提供字幕识别服务；影片修复仅支持 Linux。
 
@@ -23,6 +23,21 @@ Windows 电脑只提供字幕识别服务；影片修复仅支持 Linux。
 新版不再提供 `worker.ps1`。先在旧的项目文件夹里运行 `.\deploy\worker\windows\worker.ps1 stop`，
 在“任务计划程序”里删除 `VideoTurbo-Worker` 任务，再安装 VideoTurbo Worker。旧的项目文件夹可以删除。
 :::
+
+## 运行环境和模型
+
+VideoTurbo Worker 和主程序的本机识别第一次开启时要下载运行环境（Windows 约 3.6 GB），以及主程序当前识别模式需要的模型。
+模型只下载当前模式要用的：
+
+| 识别模式 | 要下载的模型 |
+| --- | --- |
+| Qwen3-ASR（默认，开启双遍补漏） | Qwen3-ASR + anime-whisper，约 7.2 GB |
+| Qwen3-ASR（关闭双遍补漏） | Qwen3-ASR，约 4.4 GB |
+| Faster-Whisper | Whisper large-v3，约 2.9 GB |
+
+窗口里的模型清单列出每个模型的用途、大小和是否已下载：当前模式需要的默认勾选，可以改勾选后点“下载所选”，
+不用的模型可以删除。之后在控制台换了识别模式、缺新模式的模型时不会自动下载，窗口和控制台“云主机”页会提示，
+点“下载”后才下载；下载好之前这台电脑不接这个模式的任务。
 
 ## Linux
 
